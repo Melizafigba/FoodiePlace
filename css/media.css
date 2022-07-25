@@ -1,0 +1,25 @@
+@media (max-width: 741px) {
+	[class*="col-"] {
+		width: 100%;
+	}
+
+	header label {
+		display: block;
+		float: right;
+	}
+
+	/*.menu {
+		position: absolute;
+		background-color: #424242;
+		margin-right: -70%;
+	}
+
+	.menu li {
+		display: block;
+	}
+
+	/*#btn-menu:checked ~ ul {
+		margin: 0;
+	}
+
+}
