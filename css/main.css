@@ -1,28 +1,41 @@
- * {
- 	margin: 0;
+html {
+	overflow-x: hidden;
+}
+
+* {
+	margin: 0;
 	font-family: 'Montserrat', sans-serif;
- }
+}
 
 #banner {
 	width: 100%;
-	position: fixed;
-	background-color:gainsboro;
-	padding-top: 1em;
+
+	position:relative;
 	
+	background-color: gainsboro;
+	padding-top: 1em;
+
 }
 
-.logo-nav{
-width: 30%;
+.logo-nav {
+	width: 30%;
 }
+
 
 #btn-menu {
 	display: none;
 }
 
 .fa-bars {
-	color:rgb(252, 167, 56);
+	color: rgb(252, 167, 56);
 }
-
+.fa-cutlery{
+	color: rgb(252, 167, 56);
+	background-color: transparent;
+	
+ 
+  
+}
 header label {
 	display: none;
 	padding: 0% 0% 1% 1%;
@@ -30,7 +43,7 @@ header label {
 
 header label:hover {
 	cursor: pointer;
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -48,10 +61,11 @@ li {
 a {
 	text-decoration: none;
 	color: rgb(252, 167, 56);
-	
+
 }
-a:hover{
- background:oldlace;
+
+a:hover {
+	background: oldlace;
 }
 
 #imgcover {
@@ -61,12 +75,12 @@ a:hover{
 }
 
 h1 {
-  padding-left: 1.8em;
+	padding-left: 1.8em;
 	margin-bottom: 2.5em;
 	font-size: 70px;
 	color: #bdbdbd;
-  text-align: center;
-  font-family: 'Train One', cursive;
+	text-align: center;
+	font-family: 'Train One', cursive;
 }
 
 h2 {
@@ -77,13 +91,13 @@ h2 {
 
 .purplebutton {
 	background-color: #BCA9F5;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
 }
 
 .box1,
@@ -91,14 +105,23 @@ h2 {
 .box3,
 .box4,
 .box5,
-.box6{
+.box6 {
 	outline: 2px solid #CEECF5;
-	
-	 margin: 4% 4% 4% 4%;	 
+
+	margin: 4% 4% 4% 4%;
 }
 
+.box7 {
+	outline: 2px solid #CEECF5;
+	/* width: 200%; */
+	/* margin: 0.1%;  */
+	margin: 4% 4% 4% 4%;
+	
+	
+	
+}
 
-.capture{
+.capture {
 	width: 100%;
 }
 
@@ -116,12 +139,68 @@ span {
 
 .greenbutton {
 	background-color: #F5DA81;
-    border: none;
-    color: white;
-    padding: 10px 14px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
+	border: none;
+	color: white;
+	padding: 10px 14px;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+}
+
+h5 {
+	padding-top: 3.5em;
+	color: rgb(252, 167, 56);
+}
+
+
+.modal-food {
+	width: 100%;
+	padding-top: 40vh;
+
+}
+#galery{
+	width: 150%;
+	margin-left: -28%;
+}
+.producttitle {
+	color: black;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.modal-style {
+	width: 30%;
+	/* top: 40vh;  */
+	margin-left: 35%;
+}
+
+.title-modal {
+	font-size: 1.5em;
+}
+
+.adress-modal {
+	font-size: 1.5em;
+}
+
+.dialog-style {
+	background-color: rgb(252, 167, 56);
+
+}
+
+.modal-modal {
+	background-color: rgb(252, 167, 56);
+	width: 100%;
+}
+
+.modal-footer {
+	color: black;
+}
+
+.btn-close {
+	display: contents;
+	color: black;
+	font-weight: bold;
+
 }
 
 #footer {
@@ -129,9 +208,5 @@ span {
 	height: 8em;
 	text-align: center;
 	background-color: gainsboro;
+	
 }
-
-h5 {
-	padding-top: 3.5em;
-	color:rgb(252, 167, 56);
-	}

@@ -10,6 +10,10 @@
 	<link rel="stylesheet" href="css/">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="assets/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" >
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 	<link rel="stylesheet" href="css/grid.css">
@@ -29,8 +33,18 @@
 						<strong>
 							<li><a href="#">Home</a></li>
 							<li><a href="#">About</a></li>
-							<li><a href="#">Services</a></li>
 							<li><a href="#">Contact</a></li>
+							<li><a href="#">Comida Cerca de ti </a></li>
+							<li><span class="fa fa-cutlery"></span></li>
+							<li>
+								<select id="user-filter" class="form-control animate__animated animate__headShake animate__infinite	infinite">
+									<option value="" disabled selected>¿Qué comida prefieres?</option>
+									<option value="korean">Comida Coreana</option>
+									<option value="chilean">Comida Chilena</option>
+									<option value="chinese">Comida China</option>
+									<option value="barbacue">Parrilladas</option>
+								</select>
+							</li>
 						</strong>
 					</ul>
 				</nav>
@@ -45,32 +59,63 @@
 			</div>
 		</div>
 	</section>
+	<br>
 
 	<section id="imgbox">
+		<div class="modal fade modal-style" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content modal-modal">
+					<div class="modal-header">
+
+						<button type="button" class="btn btn-default btn-close " data-dismiss="modal">X</button>
+						<hr>
+						<h4 class="modal-title title-modal"></h4>
+					</div>
+					<div class="modal-body">
+						<div class="map-modal"></div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- aqui van las fotos filtradas-->
+		<section class="container">
+			<div id="galery" class="row"></div>
+		</section>
+
+
 		<div class="row">
 			<div class="col-3 box1">
 				<img class="capture" src="assets/img/paella.jpg" alt="">
 				<h4>La Paella Española</h4>
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis cumque commodi,
+					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis
+					cumque commodi,
 					ad ea laborum eos molestiae, eaque dolorem </p>
 				<span><a href="#"><button class="greenbutton">Ver más...</button></a></span>
 			</div>
-			
+
 			<div class="col-3 box2">
 				<img class="capture" src="assets/img/ratatouille.jpg" alt="">
 				<h4>Ratatouille Francés.</h4>
 				<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					 Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis cumque commodi,
-					 ad ea laborum eos molestiae, eaque dolorem </p>
+					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis
+					cumque commodi,
+					ad ea laborum eos molestiae, eaque dolorem </p>
 				<span><a href="#"><button class="greenbutton">Ver más...</button></a></span>
 			</div>
-			
+
 			<div class="col-3 box3">
-				<img class="capture "src="assets/img/ravioles.jpg" alt="">
+				<img class="capture " src="assets/img/ravioles.jpg" alt="">
 				<h4>Ravioles Italianos</h4>
 				<p> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis cumque commodi,
+					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis
+					cumque commodi,
 					ad ea laborum eos molestiae, eaque dolorem</p>
 				<span><a href="#"><button class="greenbutton">Ver más...</button></a></span>
 			</div>
@@ -78,7 +123,8 @@
 				<img class="capture " src="assets/img/ramen.jpg" alt="">
 				<h4>Ramen Coreano</h4>
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis cumque commodi,
+					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis
+					cumque commodi,
 					ad ea laborum eos molestiae, eaque dolorem </p>
 				<span><a href="#"><button class="greenbutton">Ver más...</button></a></span>
 			</div>
@@ -86,7 +132,8 @@
 				<img class="capture " src="assets/img/pastel.jpg" alt="">
 				<h4>Pastel de Choclo Chileno</h4>
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis cumque commodi,
+					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis
+					cumque commodi,
 					ad ea laborum eos molestiae, eaque dolorem </p>
 				<span><a href="#"><button class="greenbutton">Ver más...</button></a></span>
 			</div>
@@ -94,13 +141,20 @@
 				<img class="capture " src="assets/img/Pabellon.jpg" alt="">
 				<h4>Pabellon Venezolano</h4>
 				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis cumque commodi,
+					Maxime minima modi dignissimos blanditiis! At quod sed aspernatur assumenda quibusdam veritatis
+					cumque commodi,
 					ad ea laborum eos molestiae, eaque dolorem </p>
 				<span><a href="#"><button class="greenbutton">Ver más...</button></a></span>
 			</div>
 		</div>
 	</section>
-
+	<section class="text-center container-fluid">
+		<div class="row text-center">
+			<div class="col-xs-12 text-center">
+					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d302731.246030171!2d-71.65159501029355!3d-33.03699743706039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sparrilladas!5e0!3m2!1ses!2scl!4v1513125601121" width="80%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>
 	<footer id="footer">
 		<div class="row">
 			<div class="col-12">
@@ -112,7 +166,20 @@
 
 		</div>
 	</footer>
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
 </body>
-<link rel="stylesheet" href="js/main.js">
+
 
 </html>
